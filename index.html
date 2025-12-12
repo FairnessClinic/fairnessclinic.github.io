@@ -44,7 +44,12 @@
     .van{width:44px;height:28px;display:inline-block;vertical-align:middle}
     .pill-free{background:#fff6f4;color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:700;border:1px solid rgba(255,122,89,0.12)}
     .contact-list{display:flex;flex-direction:column;gap:8px}
-    .contact-item{display:flex;gap:8px;align-items:center}
+    .contact-item{
+      display:flex;
+      justify-content: space-between; /* Added for left/right alignment */
+      align-items: center;
+      gap: 8px; /* Keeps the gap */
+    }
     .donate{background:#fff;border-radius:10px;padding:10px;border:1px dashed rgba(11,59,63,0.06)}
     a{color:var(--trust);text-decoration:none}
     .sr-only{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -68,13 +73,11 @@
       <section class="hero card" aria-labelledby="hero-title">
         <div style="display:flex;gap:14px;align-items:flex-start">
           <div style="flex:1">
-            <!--div class="badge">No cost</div>-->
             <h1 id="hero-title">Something feels unfair at work?</h1>
             <p class="lead">Talk to a specialist at Fairness Clinic — free, confidential help in your community. No upfront fees.</p>
 
             <div class="ctas">
               <a class="btn btn-primary" href="mailto:welcome@fairnessclinic.ca?subject=I%20need%20help%20at%20work" title="Email Fairness Clinic">
-                <!-- SVG chat icon -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 Talk to a specialist — Free
               </a>
@@ -88,7 +91,6 @@
           </div>
 
           <div style="width:160px">
-            <!-- Simple illustrative van SVG -->
             <svg class="van" viewBox="0 0 64 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Outreach van">
               <rect x="2" y="8" width="60" height="22" rx="4" fill="#e6fffb"/>
               <rect x="6" y="12" width="36" height="12" rx="2" fill="#0f7b8a"/>
@@ -123,7 +125,6 @@
           <h2 id="schedule-title" style="margin-top:0;font-size:16px;color:#0b3b3f">Where we go next</h2>
           <p class="small">We update our route regularly. Subscribe for schedule updates and stop alerts.</p>
 
-          <!-- Simple subscribe form (Formspree placeholder) -->
           <form action="https://formspree.io/f/your-form-id" method="POST" style="display:flex;flex-direction:column;gap:8px">
             <label class="sr-only" for="email">Email for schedule updates</label>
             <input id="email" name="email" type="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid #e6eef0" />
@@ -133,9 +134,9 @@
           <div style="margin-top:12px">
             <h3 style="font-size:14px;color:#0b3b3f;margin-bottom:6px">Quick contact</h3>
             <div class="contact-list">
-              <div class="contact-item"><strong>Free help:</strong>&nbsp;<a href="mailto:welcome@fairnessclinic.ca">welcome@fairnessclinic.ca</a></div>
-              <div class="contact-item"><strong>Paid services:</strong>&nbsp;<a href="mailto:welcome@fairnessclinic.com">welcome@fairnessclinic.com</a></div>
-              <div class="contact-item"><strong>Volunteer:</strong>&nbsp;<a href="mailto:volunteer@fairnessclinic.ca">volunteer@fairnessclinic.ca</a></div>
+              <div class="contact-item"><strong>Free help:</strong><a href="mailto:welcome@fairnessclinic.ca">welcome@fairnessclinic.ca</a></div>
+              <div class="contact-item"><strong>Legal services:</strong><a href="mailto:welcome@fairnessclinic.com">welcome@fairnessclinic.com</a></div>
+              <div class="contact-item"><strong>Volunteer:</strong><a href="mailto:volunteer@fairnessclinic.ca">volunteer@fairnessclinic.ca</a></div>
             </div>
           </div>
 
